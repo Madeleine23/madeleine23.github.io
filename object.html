@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style >
+
+.object{
+	width: 200px;
+	height: 200px;
+	background-image: url(https://i.pinimg.com/736x/40/6e/69/406e69fa30c5844972a244f7c2c1528a.jpg);
+	display: inline-block;
+	background-size:  contain;
+	background-repeat: no-repeat;
+	transition: 3s;
+}	
+.object: hover{
+	transform: rotate(360deg);
+}
+
+</style>
+	
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+
+	function makeObject(){
+		var madeleine = document.createElement("div");
+		document.body.appendChild(madeleine)
+		madeleine.classList.add("object")
+	}
+
+	setInterval(
+		makeObject, 100
+		)
+
+</script>
+
+
+</body>
+</html>
+
+
+
+

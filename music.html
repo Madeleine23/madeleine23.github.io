@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		#button{
+			width: 200px;
+			height: 200px;
+			background-color: springgreen;
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<div id="button"></div>
+
+	<script type="text/javascript">
+		
+		button.addEventListener(
+			"click", function(){
+
+			console.log("hey maddie!");
+
+
+		})
+
+	</script>
+
+	<script type="text/javascript">
+		
+
+		var clickCounter = 0;
+
+		button.addEventListener(
+
+			"click", function(){
+
+				clickCounter = clickCounter+1
+
+				if (clickCounter%2 == 0){
+					console.log(clickCounter);
+					button.style.backgroundColor = "springgreen"; }
+
+				else if (clickCounter%2 == 1) {
+					console.log(clickCounter);
+					button.style.backgroundColor = "red";}
+			})
+
+
+
+
+
+ </script>
+
+</body>
+</html>
+
+
+
+

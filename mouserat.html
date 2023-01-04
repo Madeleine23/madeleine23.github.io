@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+#ratimage{
+	width: 200px;
+	height: 200px;
+	background-color: clear;
+	background-image: url(ratimage.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+	</style>
+</head>
+<body>
+
+<div id="ratimage"></div>
+
+
+
+<script type="text/javascript">
+	document.addEventListener(
+		"mousemove",
+		function(event){
+			ratimage.style.top = event.clientY +"px"
+			ratimage.style.left = event.clientX +"px"
+		})
+
+
+	
+
+
+</script>
+
+</body>
+</html>

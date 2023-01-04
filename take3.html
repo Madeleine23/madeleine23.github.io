@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			background-color:mistyrose;
+
+		}
+
+		#button{
+			width: 200px;
+			height: 200px;
+			background-color: springgreen;
+		}
+
+		#button2{
+			width: 200px;
+			height: 200px;
+			background-color: lightgoldenrodyellow;
+		}
+
+	</style>
+</head>
+<body>
+
+	<center><h1>this has taken forever.</h1>
+
+		</center>
+
+	<div id="button"></div>
+	<div  id="button2"></div>
+
+
+
+
+	<script type="text/javascript">
+		
+		
+
+		var clickCounter = 0;
+
+		button.addEventListener(
+
+			"click", function(){
+
+				clickCounter = clickCounter+1
+
+				if (clickCounter%2 == 0){
+					console.log(clickCounter);
+					button.style.backgroundColor = "springgreen"; }
+
+				else if (clickCounter%2 == 1) {
+					console.log(clickCounter);
+					button.style.backgroundColor = "indianred";}
+			})
+
+
+
+
+		var clickCounter2 = 0;
+
+		button2.addEventListener(
+
+			"click", function(){
+
+				clickCounter2 = clickCounter2+1
+
+				if (clickCounter2%2 == 0){
+					console.log(clickCounter2);
+					button2.style.backgroundColor = "lightgoldenrodyellow"; }
+
+				else if (clickCounter2%2 == 1) {
+					console.log(clickCounter2);
+					button2.style.backgroundColor = "cadetblue";}
+			})
+
+
+
+
+
+ </script>
+
+
+
+
+</body>
+</html>
+
+
+
+
