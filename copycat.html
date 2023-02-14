@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #spencer {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+
+var spencer = document.getElementById("spencer");
+    var array = ["red", "blue", "green", "yellow", "purple"];
+
+    var number = 0;
+
+<body>
+    <div id="spencer"></div>
+    <script type="text/javascript">
+
+    	var counter = 0
+    	var spencer = document.addEventListener("click", 
+			function(){
+
+
+    
+        spencer.style.backgroundColor = array[number];
+        number = number + 1;
+
+        if (number>4){
+        	number = 0;
+        }
+
+    })
+    </script>
+</body>
+
+</html>

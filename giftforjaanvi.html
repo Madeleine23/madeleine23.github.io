@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		body{
+			background-color: lightpink;
+		}
+		
+
+		#pics{
+			height: 375px;
+			width: 375px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(heart.png);
+			background-position: center;
+
+		}
+
+		#container{
+			height: 900px;
+			width: 900px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(heart2.png);
+			background-position: center;}
+
+
+	
+	</style>
+</head>
+<body>
+<center>
+	<div id="container">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="pics"></div>
+
+	<div id="words">
+		happy valentines bbg <3
+	</div>
+</div>
+</center>
+
+<script type="text/javascript">
+	var background = ["meAndJaanvi1.png", "MeandJaanvi2.png", "MeandJaanvi3.png", "MeandJaanvi4.png", "MeandJaanvi5.png", "MeandJaanvi7.jpg", "MeandJaanvi8.jpg", "MeandJaanvi9.jpg", "MeandJaanvi10.JPG", "meandjaanvi11.JPG"]
+
+	document.addEventListener("click",
+		function(){
+			var random = Math.round(Math.random()*9)
+				pics.style.backgroundImage = "url("+
+					background [random]+")";
+		})
+</script>
+
+
+
+
+
+
+</body>
+</html>

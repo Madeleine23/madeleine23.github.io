@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		#box1{
+			width: 400px;
+			height: 200px;
+			background-color: lightgoldenrodyellow;
+		}
+
+		#box2{
+			width: 400px;
+			height: 200px;
+			background-color: lightcyan;
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+	<div id="box1"></div>
+	<div id="box2"></div>
+
+
+<script type="text/javascript">
+	
+
+	var processes = ["preterito ar", "preterito er", "preterito ir"]
+
+	var answers = ["preterito ar: ", "preterito er", "preterito ir"]
+
+	document.addEventListener("click", function(){
+	var number = Math.round(Math.random()*3);
+
+
+	box1.innerText = processes[number]
+
+
+function box2text() {
+	// body...
+
+	box2.innerText = answers[number]
+	}
+	
+setTimeout(box2text, 3000)
+
+ })
+
+
+</script>
+
+</body>
+</html>
+
+
+

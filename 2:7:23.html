@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+
+	<style type="text/css">
+		
+
+		.hearts{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.spin{
+			transform: rotate(720deg);
+			transition: 2s;
+		}
+
+	</style>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		
+
+
+		function makeHeart (){
+			var heart = document.createElement("div");
+			document.body.appendChild(heart)
+			heart.classList.add("hearts") ;
+			heart.id = "heart"+x
+
+
+			heart.addEventListener("click", function(){
+				heart.classList.add("spin")
+			})
+		}
+
+		for(var i=0; 1<100; i=i+1){makeHEarts(i)}
+
+			heart0.addEventListener("click",
+				function(){
+					heart0.style.width = "1000px"
+					heart0.style.height = "1000px"
+				})
+	</script>
+
+</body>
+</html>
