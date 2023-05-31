@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <style>
+      table, td {
+        border: 1px solid black;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        font-size: 50px;
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="cell00" onclick="playerMove(0, 0)"></td>
+        <td id="cell01" onclick="playerMove(0, 1)"></td>
+        <td id="cell02" onclick="playerMove(0, 2)"></td>
+      </tr>
+      <tr>
+        <td id="cell10" onclick="playerMove(1, 0)"></td>
+        <td id="cell11" onclick="playerMove(1, 1)"></td>
+        <td id="cell12" onclick="playerMove(1, 2)"></td>
+      </tr>
+      <tr>
+        <td id="cell20" onclick="playerMove(2, 0)"></td>
+        <td id="cell21" onclick="playerMove(2, 1)"></td>
+        <td id="cell22" onclick="playerMove(2, 2)"></td>
+      </tr>
+    </table>
+    <p id="status"></p>
+    <script>
+      let board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+      ];
+      let currentPlayer = 'X';
+      let movesLeft = 9;
+      
+      function playerMove(row, col) {
+        if (board[row][col] !== '' || checkWin()) {
+          return;
+        }
+        board[row][col] = currentPlayer;
+        document.getElementById(`cell${row}${col}`).innerHTML = currentPlayer;
+        movesLeft--;
+        if (checkWin()) {
+          document.getElementById('status').innerHTML = `${currentPlayer} wins!`;
+          return;
+        }
+        if (movesLeft === 0) {
+          document.getElementById('status').innerHTML = 'Tie game!';
+          return;
+        }
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        document.getElementById('status').innerHTML = `Player ${currentPlayer}'s turn`;
+      }
+      
+      function checkWin() {
+        // check rows
+        for (let i = 0; i < 3; i++) {
+          if (board[i][0] !== '' && board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
+            return true;
+          }
+        }
+        // check columns
+        for (let j = 0; j < 3; j++) {
+          if (board[0][j] !== '' && board[0][j] === board[1][j] && board[1][j] === board[2][j]) {
+            return true;
+          }
+        }
+        // check diagonals
+        if (board[0][0] !== '' && board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+          return true;
+        }
+        if (board[0][2] !== '' && board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+         
